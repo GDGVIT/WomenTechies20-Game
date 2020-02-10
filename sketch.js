@@ -64,33 +64,39 @@ function draw() {
 function addBall(){
     no += 1;
     xxx = random(width);
-    ball[no] = new Ball(xxx, -30, 30);
+    ball[no] = new Ball(xxx, 0, 30);
     ballX[no] = xxx;
     loseCheck[no] = 0;
     // console.log("this is hap")
 }
 setInterval(function(){ 
     speedball += 0.1;
+    if(timer > 500){
+        timer = timer - 200;
+    }else{
+        timer = 100;
+    }
  }, 1500);
 setInterval(function(){ 
     addBall();
     console.log(speedball)
- }, 1500);
+    console.log(timer)
+ }, 1000);
 
 
  function checkCollide(i){
-     if(ballY[i] > (paddleY-15)){
-        if(ballX[i] > (paddleX-15) && ballX[i] < (paddleX+15) && ballY[i] < (paddleY+15) ){
+     if(ballY[i] > (paddleY-45)){
+        if(ballX[i] > (paddleX-30) && ballX[i] < (paddleX+30) && ballY[i] < (paddleY+45) ){
             points = i+1;
             loseCheck[i] = 1
             console.log("points = ", points)
         }
     }
-    if(ballY[i] > (paddleY+15) && loseCheck[i] == 0){
+    if(ballY[i] > (paddleY+45) && loseCheck[i] == 0){
         fill(255);
       text("GAME OVER!", width/2-50, height/2);
-      text("you collected " + points + " opportunities!", width/2 - 80, height/2 + 50);
-      text("redirecting to Home page in 10 seconds", width/2-80, height/2 + 100);
+      text("you collected " + points + " opportunities!", width/2 - 90, height/2 + 50);
+      text("redirecting to Home page in 10 seconds", width/2-120, height/2 + 100);
         noLoop();
         setTimeout("restartScreen()", 10000);
     }
@@ -124,7 +130,7 @@ function drawPaddle(dx, dy) {
     // console.log("this is being clled")
     stroke(100); // color of paddle border
     strokeWeight(4); // border thickness of 4px
-    ellipse(dx, dy, 30);
+    ellipse(dx, dy, 60);
   }
 
 
