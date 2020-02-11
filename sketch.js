@@ -63,6 +63,7 @@ function setup() {
       // loseCheck[i]=0;
       checkCollide(i);
     }
+    fill(252,37,126);
     textSize(24);
       text(points , 40,40);
   }
@@ -80,14 +81,10 @@ function addBall(){
     // console.log(floor(qw))
     // console.log("this is hap")
 }
-setTimeout(function(){ 
-      speedball = 4;
-      timer = 1;
- }, 10000);
 setInterval(function(){ 
     addBall();
-    console.log(timer)
- }, timer);
+    // console.log(timer)
+ }, 600);
 
 
  function checkCollide(i){
@@ -99,12 +96,11 @@ setInterval(function(){
         }
     }
     if(ballY[i] > (paddleY+60) && loseCheck[i] == 0){
-        fill(252,37,126);
-    textSize(20);
-        
-      text("GAME OVER!", width/2.7, height/2);
-      text("you collected " + points + " opportunities!", width/4, height/2 + 50);
-      text("click anywhere to restart", width/3.7, height/2 + 100);
+      fill(164,27,227);
+      textSize(20);
+      text("GAME OVER!", 0, height/2);
+      text("you collected " + points + " opportunities!", 0, height/2 + 50);
+      text("click anywhere to restart", 0, height/2 + 100);
       noLoop();
       restartScreen();
         // setTimeout("restartScreen()", 10000);
@@ -130,7 +126,7 @@ class Ball {
  
  
   move(i) {
-   this.y+=speedball; 
+   this.y+=5; 
    ballY[i] = this.y;
 //    console.log(ballY[i])
   }
