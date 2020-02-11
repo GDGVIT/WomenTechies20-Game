@@ -16,6 +16,7 @@
   let girl;
   var timer = 2000;
   var speedball = 1;
+  var deleter = 0;
 function preload(){
     girl = loadImage('./girlpng.png');  
 }
@@ -28,6 +29,7 @@ function setup() {
   createCanvas(winsWidth, windowHeight);
   strokeWeight(20.0);
   stroke(255, 100);
+  frameRate(60)
 //   noCursor();
 //   for(var i=0;i<100;i++){ //loop 5 times
 //     //put an object in the array for each loop
@@ -49,7 +51,7 @@ function draw() {
 //   setTimeout(function(){
 //       console.log('et')
 //     }, 1000); 
-  for(var i=0;i<no;i=i+1){ //loop 5 times
+  for(var i=points;i<no;i=i+1){ //loop 5 times
     ball[i].display();
      //run the display function of the object
     ball[i].move(i);
@@ -70,7 +72,7 @@ function addBall(){
     // console.log("this is hap")
 }
 setInterval(function(){ 
-    speedball += 0.1;
+    speedball += 0.2;
     if(timer > 500){
         timer = timer - 200;
     }else{
@@ -79,8 +81,8 @@ setInterval(function(){
  }, 1500);
 setInterval(function(){ 
     addBall();
-    console.log(speedball)
-    console.log(timer)
+    // console.log(speedball)
+    // console.log(timer)
  }, 1000);
 
 
@@ -95,8 +97,8 @@ setInterval(function(){
     if(ballY[i] > (paddleY+45) && loseCheck[i] == 0){
         fill(255);
       text("GAME OVER!", width/2-50, height/2);
-      text("you collected " + points + " opportunities!", width/2 - 90, height/2 + 50);
-      text("redirecting to Home page in 10 seconds", width/2-120, height/2 + 100);
+      text("you collected " + points + " opportunities!", width/2 - 100, height/2 + 50);
+      text("redirecting to Home page in 10 seconds", width/2-140, height/2 + 100);
         noLoop();
         setTimeout("restartScreen()", 10000);
     }
