@@ -40,7 +40,7 @@ function setup() {
 //   for(var i=0;i<100;i++){ //loop 5 times
 //     //put an object in the array for each loop
 //     var d=random(100,200);
-    ballX[0] = random(width);
+    ballX[0] = random(20, width-20);
     loseCheck[0] == 0;
     ball[0] = new Ball(ballX[0], -30, 30); 
 //   }
@@ -72,7 +72,7 @@ function setup() {
 
 function addBall(){
     no += 1;
-    xxx = random(width);
+    xxx = random(20, width-20);
     ball[no] = new Ball(xxx, 0, 30);
     ballX[no] = xxx;
     loseCheck[no] = 0;
@@ -92,7 +92,7 @@ setInterval(function(){
         if(ballX[i] > (paddleX-30) && ballX[i] < (paddleX+30) && ballY[i] < (paddleY+60) ){
             points = i+1;
             loseCheck[i] = 1
-            // console.log("points = ", points)
+            console.log('hapnin')
         }
     }
     if(ballY[i] > (paddleY+60) && loseCheck[i] == 0){
@@ -101,8 +101,10 @@ setInterval(function(){
       text("GAME OVER!", 0, height/2);
       text("you collected " + points + " opportunities!", 0, height/2 + 50);
       text("click anywhere to restart", 0, height/2 + 100);
+      console.log(ballY[i], paddleY)
       noLoop();
       restartScreen();
+
         // setTimeout("restartScreen()", 10000);
     }
  }
@@ -120,7 +122,7 @@ class Ball {
    //Functions 
   display() {
     
-    image(bulb, this.x, this.y, 45, 45, 0, 0); 
+    image(bulb, this.x, this.y, 60, 60, 0, 0); 
 
   }
  
