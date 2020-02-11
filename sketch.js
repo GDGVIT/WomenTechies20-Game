@@ -88,7 +88,7 @@ setInterval(function(){
     }
     if(ballY[i] > (paddleY+60) && loseCheck[i] == 0){
       fill(164,27,227);
-      textSize(30);
+      textSize(20);
       text("GAME OVER!", 0, height/2);
       text("you collected " + points + " opportunities!", 0, height/2 + 50);
       text("click anywhere to restart", 0, height/2 + 100);
