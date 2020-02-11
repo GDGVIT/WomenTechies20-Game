@@ -1,25 +1,16 @@
 
 
 // THE GAME=====================
-
-let k = 0;
-    let paddleX = 100,
+  let paddleX = 100,
     paddleY = 100,
     no = 0;
   var ball=[];
   var ballX = [];
   var ballY = [];
-  var yes = 0;
-  var s = 0;
   var points = 0;
   var loseCheck = [];
   let player,
       bg;
-  var rn;
-  var numb;
-  var timer = 1000;
-  var speedball = 2;
-  var deleter = 0;
 function preload(){
     player = loadImage('./assets/player.png');  
     bg = loadImage('./assets/bg.png');
@@ -40,7 +31,7 @@ function setup() {
 //   for(var i=0;i<100;i++){ //loop 5 times
 //     //put an object in the array for each loop
 //     var d=random(100,200);
-    ballX[0] = random(20, width-20);
+    ballX[0] = random(25, width-25);
     loseCheck[0] == 0;
     ball[0] = new Ball(ballX[0], -30, 30); 
 //   }
@@ -72,7 +63,7 @@ function setup() {
 
 function addBall(){
     no += 1;
-    xxx = random(20, width-20);
+    xxx = random(25, width-25);
     ball[no] = new Ball(xxx, 0, 30);
     ballX[no] = xxx;
     loseCheck[no] = 0;
