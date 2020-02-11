@@ -82,7 +82,7 @@ function addBall(){
 }
 setTimeout(function(){ 
       speedball = 4;
-      timer = 20;
+      timer = 1;
  }, 10000);
 setInterval(function(){ 
     addBall();
@@ -100,7 +100,7 @@ setInterval(function(){
     }
     if(ballY[i] > (paddleY+60) && loseCheck[i] == 0){
         fill(252,37,126);
-    textSize(30);
+    textSize(20);
         
       text("GAME OVER!", width/2.7, height/2);
       text("you collected " + points + " opportunities!", width/4, height/2 + 50);
