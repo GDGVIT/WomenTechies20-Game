@@ -17,29 +17,61 @@
             font-family: 'Lato', sans-serif;
         }
         .container{
-            width: 100%;
+            width: 80%;
             text-align: center;
+            margin-top: 150px;
+
         }
         .startmsg{
             display: inline-block;
-            margin-top: 40vh;
+            /* margin-top: 40vh; */
         }
+        #gamestart{
+            color: #a41be3;
+            font-size: 2rem;
+        }
+        .sideimg img{
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            }
+        .logo img{
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+
+        }
+        .logo{
+            margin-bottom: 50px;
+        }
+        .sideimg{
+            float: left;
+
+            margin-bottom: 50px;
+        }
+        
     </style>
 
 </head>
 <body>
      <div class="container">
-         <div class="startmsg">
-             <h1>
-                Catch 'em all!
-             </h1>
-             <h3>
-                 Made with <3 by DSC-VIT
-             </h3>
-            <button id="gamestart" class="btn">
-                Click here to start
-            </button>
-         </div>
+         <!-- <div class="startmsg"> -->
+            <div class="logo col-12">
+                <img src="./logo-orange-b.png" alt="WomenTechies" class="wt">
+             </div>
+
+             <div class="sideimg col-6">
+                <img src="./violet-man-woman.png" alt="women and men" class="lefti">
+             </div>
+             
+             <div class="sideimg col-6">
+                <img src="./women-look.png" alt="women looking" class="righti">
+             </div>
+             <div class="col-12">
+                <button id="gamestart" class="btn">
+                    Click to play!
+                </button>
+            </div>
      </div>
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

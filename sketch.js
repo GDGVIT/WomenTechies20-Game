@@ -44,7 +44,7 @@ function draw() {
   background(0);
 
   paddleX = mouseX;
-  paddleY = windowHeight - 50;
+  paddleY = windowHeight - 100;
   
 //   segment(x, y, angle1);
   drawPaddle(paddleX, paddleY);
