@@ -9,6 +9,7 @@
   var ballY = [];
   var points = 0;
   var loseCheck = [];
+  var timer = 800;
   let player,
       bg;
 function preload(){
@@ -72,10 +73,21 @@ function addBall(){
     // console.log(floor(qw))
     // console.log("this is hap")
 }
-setInterval(function(){ 
+
+
+var myFunction = function() {
+    if(timer>=600 && timer<=800){
+      timer = timer - 3;
+    } else if(timer>=500 && timer<600){
+      timer = timer - 2;
+    } else if(timer>=400 && timer<500){
+      timer = timer - 1;
+    }
+    console.log(timer)
     addBall();
-    // console.log(timer)
- }, 600);
+    setTimeout(myFunction, timer);
+}
+setTimeout(myFunction, timer);
 
 
  function checkCollide(i){
@@ -83,15 +95,16 @@ setInterval(function(){
         if(ballX[i] > (paddleX-30) && ballX[i] < (paddleX+30) && ballY[i] < (paddleY+60) ){
             points = i+1;
             loseCheck[i] = 1
-            console.log('hapnin')
+            // console.log('hapnin')
         }
     }
     if(ballY[i] > (paddleY+60) && loseCheck[i] == 0){
       fill(164,27,227);
       textSize(30);
-      text("GAME OVER!", 0, height/2);
-      text("you collected " + points + " opportunities!", 0, height/2 + 50);
-      text("click anywhere to restart", 0, height/2 + 100);
+      textAlign(CENTER);
+      text("GAME OVER!", width/2, height/2);
+      text("you collected " + points + " opportunities!", width/2, height/2 + 50);
+      text("click anywhere to restart", width/2, height/2 + 100);
       console.log(ballY[i], paddleY)
       noLoop();
       restartScreen();
