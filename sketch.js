@@ -27,7 +27,7 @@ function setup() {
   // strokeWeight(20.0);
   // stroke(255, 100);
   image(bg, 0, 0);
-  frameRate(60)
+  frameRate(60);
 //   noCursor();
 //   for(var i=0;i<100;i++){ //loop 5 times
 //     //put an object in the array for each loop
@@ -99,11 +99,16 @@ setTimeout(myFunction, timer);
         }
     }
     if(ballY[i] > (paddleY+60) && loseCheck[i] == 0){
+      filter(GRAY);
       fill(164,27,227);
-      textSize(30);
+      textSize(24);
       textAlign(CENTER);
       text("GAME OVER!", width/2, height/2);
-      text("you collected " + points + " opportunities!", width/2, height/2 + 50);
+      if(points==0){
+        text("you collected " + "no" + " opportunities :(", width/2, height/2 + 50);  
+      }else{
+        text("you collected " + points + " opportunities!", width/2, height/2 + 50);
+      }
       text("click anywhere to restart", width/2, height/2 + 100);
       console.log(ballY[i], paddleY)
       noLoop();
