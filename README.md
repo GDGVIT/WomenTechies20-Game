@@ -1,46 +1,40 @@
 <p align="center">
+<a href="https://dscvit.com">
 	<img src="https://user-images.githubusercontent.com/30529572/72455010-fb38d400-37e7-11ea-9c1e-8cdeb5f5906e.png" />
-	<h2 align="center"> Womentechies game </h2>
-	<h4 align="center"> A basic catch game made using p5.js <h4>
+</a>
+	<h2 align="center"> Womentechies'20 Game </h2>
+	<h4 align="center"> A basic catch game made using p5.js for WomenTechies'20 to help participants chill out during breaks. <h4>
 </p>
 
 ---
-[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE) 
-  [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](INSERT_UI_LINK_HERE)
+[![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](https://playcollect.dscvit.com)
 
 
 ## Functionalities
-- [ ]  < insert functionality >
-- [ ]  < insert functionality >
-- [ ]  < insert functionality >
-- [ ]  < insert functionality >
+- [x]  Responsive
+- [x]  Exciting Game
+- [x]  Track Score
 
 <br>
 
 
 ## Instructions to run
-
-* Pre-requisites:
-	-  < insert pre-requisite >
-	-  < insert pre-requisite >
-
-* < directions to install > 
-```bash
-< insert code >
+* Directions to install
+```
+$ git clone https://github.com/GDGVIT/WomenTechies20-Game
+$ cd WomenTechies20-Game
 ```
 
-* < directions to execute >
-
-```bash
-< insert code >
+* Directions to execute
+```
+Open index.html
 ```
 
 <br>
 
 ## Contributors
 
-* [ < INSERT NAME HERE > ](INSERT_PROFILE_URL_HERE)
-* [ < INSERT NAME HERE > ](INSERT_PROFILE_URL_HERE)
+* [Ashutosh Kaushik](https://github.com/AshDarkfold)
 
 
 
